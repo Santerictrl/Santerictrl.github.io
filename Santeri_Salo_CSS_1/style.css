@@ -1,0 +1,303 @@
+/* =======1. RESET DEFAULTS======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* =======2. SELECTORS=======*/
+
+/*---2.1 Type selectors---*/
+/* Header Owl Image */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  visibility: visible;
+
+}
+
+/* Background Image & Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(3, 60, 146, 0.13), rgba(206, 225, 255, 0.72)),
+              url("low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg") center/cover no-repeat fixed;
+  padding: 20px;
+  line-height: 1.6;
+
+}
+
+/* Header */
+header {
+  margin: 0 auto 20px;
+  min-width: 420px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #789cff;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+
+}
+
+/* Navigation bar and styling */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+
+}
+
+nav a {
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: transform 0.2s ease, color 0.2s ease;
+
+}
+
+nav a:hover {
+  color: #0056b3;
+  transform: translateY(-2px);
+
+}
+
+/* Main section */
+main {
+  text-align: center;
+  margin-top: 20px;
+  min-width: 300px;
+
+}
+
+/* Text area */
+textarea {
+  width: 100%;
+  min-height: none;
+  max-height: none;
+  min-width: 350px;
+  max-width: 400px;
+  overflow: auto;
+  padding: 10px;
+  border: 1.5px solid #005eff;
+  border-radius: 8px;
+  font-size: 1em;
+  resize: vertical;
+
+}
+
+/* Blockquote styling */
+blockquote {
+  text-align: center;
+  max-width: 500px;
+  border-left: 4px solid #789cff;
+  border-right: 4px solid #789cff;
+  padding-left: 1px;
+  color: #000000;
+  font-style: italic;
+  margin: 15px auto;
+
+}
+
+/*---2.2 Attribute selectors---*/
+/* What is your fitness goal? */
+[list="goals"] {
+  width: 155px;
+  padding: 10px;
+  border: 1.5px solid #005eff;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+}
+
+/*---2.3 Class selectors (Boxes with a lightblue background)---*/
+.section {
+  margin: 0 auto 20px;
+  max-width: 720px;
+  width: calc(100% - 40px);
+  background-color: #b1ccff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.section {
+  min-width: 400px;
+}
+
+.section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+.section h3 {
+  color: #2a2a2a;
+  border-bottom: 2px solid #789cff;
+  padding-top: 0%;
+  padding-bottom: 6px;
+  padding-left: 0%;
+  padding-right: 0%;
+  margin-top: 1px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.section p, .section label {
+  color: #444;
+  line-height: 1.6;
+  max-width: 400px;
+  min-width: none;
+  min-height: auto;
+
+}
+
+.section > aside p {
+  text-align: center;
+  margin: 8px auto 0;
+  max-width: 400px;
+
+}
+
+/* Buttons for options (Gym location, Additionals and introduction to the gym) */
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 7px 9px 8px;
+  padding: 8px 14px 7px 13px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  cursor: pointer;
+  color: #2a2a2a;
+  font-weight: 600;
+  transition: background-color 0.18s ease, transform 0.12s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  user-select: none;
+
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+
+}
+
+.choice:hover {
+  background-color: #329afb;
+
+}
+
+.choice.selected {
+  background: #789cff;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+
+}
+
+.choice.selected:after {
+  content: '✓'; !important
+  display: inline-block;
+  margin-left: 8px;
+
+}
+
+/* No-choice button for newsletter */
+.choice.no-choice.selected:after {
+  content: '✕'; !important
+  display: inline-block;
+  margin-left: 8px;
+
+}
+
+/*=======3. TEXT INPUT FIELDS & STYLING=======*/
+[id="firstname"],
+[id="lastname"],
+[id="email"],
+[id="password"],
+[id="confirm_password"],
+[id="age"],
+textarea {
+  width: 155px;
+  padding: 10px;
+  border: 1.5px solid #005eff;
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-align: center;
+
+}
+
+/*=======4. TOTAL DISPLAY & PRICE SUMMARY=======*/
+/* ID selector for total price*/
+#total {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #007bff;
+  text-shadow: 1px 1px 1px #00000063 ;
+  margin-top: 20px;
+
+}
+
+#total:hover {
+  color: #0056b3;
+
+}
+
+/*=======5. JOIN BUTTON=======*/
+.join-btn {
+  background-color: #789cff;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-block;
+
+}
+
+/* Join button background image & Styling */
+.section.join-btn {
+  background-image: url("pexels-victorfreitas-949132.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+[type="submit"] {
+  background-color: #0e42d3;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-block;
+
+}
+
+[type="submit"]:hover {
+  background-color: #e92626;
+
+}
