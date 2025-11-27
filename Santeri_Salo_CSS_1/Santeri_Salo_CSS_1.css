@@ -23,7 +23,7 @@ img {
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(rgba(3, 60, 146, 0.13), rgba(206, 225, 255, 0.72)),
-              url("/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg") center/cover no-repeat fixed;
+              url("low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg") center/cover no-repeat fixed;
   padding: 20px;
   line-height: 1.6;
 
@@ -276,7 +276,7 @@ textarea {
 
 /* Join button background image & Styling */
 .section.join-btn {
-  background-image: url(/pexels-victorfreitas-949132.jpg);
+  background-image: url("pexels-victorfreitas-949132.jpg");
   background-size: cover;
   background-position: center;
 
