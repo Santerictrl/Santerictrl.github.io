@@ -1,0 +1,280 @@
+/*=======Universal Box Sizing with Inheritance=======*/
+* {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Body section*/
+body {
+  font-family: 'Space Mono', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #ffffff;
+  overflow: hidden;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*Nav section*/
+nav {
+  text-align: center;
+  margin: 15px 0;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-align: center;
+  margin: 15px 0;
+  text-decoration: none;
+  color: #ffffffa4;
+  font-weight: 600;
+  letter-spacing: 4px;
+  word-spacing: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #3977ff57;
+}
+
+nav a:visited {
+  color: #0059ffa4;
+}
+
+/*Main section*/
+main {
+  text-align: center;
+  display: block;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/* Center the image gallery row so columns are centered within the container */
+#image-gallery .row {
+  justify-content: center;
+}
+
+/*@font-face rule to define a custom font*/
+@font-face {
+  font-family: myFirstFont;
+  src: url("StoryScript-Regular.ttf") format("woff2"),
+  url("StoryScript-Regular.ttf") format("woff"),
+  url("StoryScript-Regular.ttf") format("truetype");
+}
+
+/*Title styling using the @font-face*/
+h1.title {
+  font-family: "myFirstFont", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 20px 0;
+  color: rgb(255, 255, 255) !important;
+}
+
+/*Blockquote section*/
+blockquote {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 12px;
+  color: #ffffff;
+  padding-top: 60px;
+  padding-left: 10px;
+  margin: 20px 0;
+}
+
+/*Footer section*/
+footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #fff;
+  height: 70px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/*============================================================================*/
+/*=======HOME PAGE SECTION=======*/
+
+
+/*=======HOME PAGE BACKGROUND IMAGE=======*/
+#home-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+/*Blurred background image*/
+#home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('DSC04785.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+.carousel {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.carousel img {
+  object-fit: cover;
+}
+
+/*============================================================================*/
+/*=======IMAGES' PAGE=======*/
+
+/*Background image for the images page*/
+#image-gallery {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Background fixed to the viewport so content scrolls over it */
+#image-gallery::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('DSC04785.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+/*Image gallery title*/
+#image-gallery-h2 {
+  color: white;
+  font-family: 'Space Mono', sans-serif, 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  word-spacing: 10px;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  position: static;
+}
+
+#image-footer {
+  font-family: 'Space Mono', sans-serif, 'Times New Roman', serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 0;
+  color:rgba(0, 77, 128, 0.651);
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+}
+
+#image-gallery main {
+  display: block;
+}
+
+/*=============================================================================*/
+/*=======IMAGES PAGE SECTION=======*/
+img {
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Small screens: 1 column */
+@media (max-width: 575px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium screens (tablet): 2 columns */
+@media (min-width: 576px) and (max-width: 991px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (desktop and bigger): 3 columns */
+@media (min-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  p, h2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/*Contact Me Page - Padding added to the right side so it won't touch the edge of the screen*/
+#contact-main {
+  padding-right: 3rem;
+}
