@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>sanevisuals - Contact</title>
+    <!--Favicon link-->
+    <link rel="icon" type="image/x-icon" href="sanevisuals_logo_no_text.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--CDN Bootstrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!--Icon library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--Custom CSS link-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Google Fonts link-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="contact-page">
+    <header>
+      <h1 id="main-title" class="title">sanevisuals</h1>
+      <!--Nav bar-->
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" aria-label="sanevisuals home"></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="mainNav"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="images.html">Images</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contact-main">
+      <section class="row">
+        <section class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <h2>Contact Me</h2>
+          <p>For business inquiries you can message me here or send me a message via my socials.</p>
+        </section>
+        <section class="row justify-content-center">
+          <section class="col col-sm-6 col-md-8 col-lg-8 text-center">
+          <div class="contact-form-wrapper">
+            <!--Action attribute for the form submission that actually sends an email to me via the formspree.io service-->
+            <form action="https://formspree.io/f/xaqyawgn" method="POST">
+              <input class="form-control mb-3" type="email" name="email" placeholder="Your email" aria-label="Your email address" required>
+              <textarea class="form-control mb-3" name="message" placeholder="Message" aria-label="Message" required></textarea>
+              <button class="btn btn-primary" type="submit" aria-label="Send message">Send</button>
+            </form>
+           </div>
+        </section>
+        <!-- Social media icons-->
+        <section class="row justify-content-center">
+          <div class="social-media-icons">
+            <div
+              class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"
+            >
+              <a
+                href="https://www.instagram.com/sanevisuals/"
+                class="fa fa-instagram"
+                target="_blank"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/santerisaloo/"
+                class="fa fa-linkedin"
+                target="_blank"
+              ></a>
+              <a
+                href="https://www.facebook.com/sanevisuals/"
+                class="fa fa-facebook"
+                target="_blank"
+              ></a>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 sanevisuals. All rights reserved.</p>
+    </footer>
+
+    <!--Bootstrap Javascript CDN link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

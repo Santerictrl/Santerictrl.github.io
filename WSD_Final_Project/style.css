@@ -1,0 +1,306 @@
+/*@font-face rule to define a custom font*/
+@font-face {
+  font-family: myFirstFont;
+  src: url("StoryScript-Regular.ttf") format("woff2"),
+  url("StoryScript-Regular.ttf") format("woff"),
+  url("StoryScript-Regular.ttf") format("truetype");
+}
+
+
+/*CSS Variables*/
+:root {
+  --primary-color: #fddbdb;
+  --accent-color: #3977ff57;
+  --visited-color: #0059ffa4;
+  --bg-color: #f4f4f4;
+  --text-white: #ffffff;
+  --font-main: 'Space Mono', sans-serif;
+  --transition: 0.3s ease;
+}
+
+
+/*Universal Box Sizing with Inheritance*/
+* {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/*Global Styles*/
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  line-height: 1.6;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/*Main section*/
+main {
+  text-align: center;
+  display: block;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+
+/*Nav section*/
+nav {
+  text-align: center;
+  margin: 15px 0;
+  color: var(--primary-color);
+  padding: 10px 0;
+}
+
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+nav a {
+  text-align: center;
+  margin: 15px 0;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 4px;
+  word-spacing: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color var(--transition)
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+}
+
+
+/*Title styling using the @font-face*/
+h1.title {
+  font-family: "myFirstFont", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 15px;
+  margin: 20px 0;
+  color: var(--text-white);
+}
+
+
+/*Blockquote section*/
+blockquote {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 12px;
+  color: var(--text-white);
+  padding-top: 60px;
+  padding-left: 10px;
+  margin: 20px 0;
+}
+
+
+/*Footer section*/
+footer {
+  text-align: center;
+  padding: 15px 0;
+  color: var(--text-white);
+  height: 70px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+/*Before sections*/
+#home-page::before,
+#image-gallery::before,
+#contact-page::before,
+#shop-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('DSC04785.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+
+/*Image gallery section*/
+/*Center the image gallery row so columns are centered within the container*/
+#image-gallery .row {
+  justify-content: center;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+
+/*Image hover effect*/
+img:hover {
+  transform: scale(1.05);
+  transition: transform var(--transition)
+}
+
+
+/*Social media icons styling*/
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+}
+
+#images-socials {
+  margin-top: 5px;
+}
+
+#shop-socials {
+  margin-top: 5px;
+}
+
+.fa {
+  color: #fdf2db;
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+.fa:hover {
+  opacity: 0.7;
+  transform: scale(1.3);
+  transition: transform 0.5s ease;
+}
+
+
+/*Back to top button styling on Images page*/
+#btn-back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+
+/*Main page carousel styling*/
+.carousel {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+
+.carousel img {
+  object-fit: cover;
+}
+
+
+/*Image gallery title*/
+#image-gallery-h2 {
+  color: var(--text-white);
+  font-family: var(--font-main), 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  word-spacing: 10px;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  position: static;
+}
+
+
+#images-paragraph {
+  margin-bottom: 50px;
+}
+
+
+/*Contact Me Page - Padding added to the right side so it won't touch the edge of the screen while on smaller devices*/
+#contact-main {
+  padding-right: 3rem;
+}
+
+
+/*"Send" and "Shop" button styling*/
+.btn-primary:hover {
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+}
+
+
+/* Small screens: 1 column */
+@media (max-width: 575px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Medium screens (tablet): 2 columns */
+@media (min-width: 576px) and (max-width: 991px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Large screens (desktop and bigger): 3 columns */
+@media (min-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 575px) {
+  p, h2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

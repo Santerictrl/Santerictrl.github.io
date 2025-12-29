@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>sanevisuals - Home</title>
+    <!--Favicon link-->
+    <link rel="icon" type="image/x-icon" href="sanevisuals_logo_no_text.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--CDN Bootstrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!--Icon library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--Custom CSS link-->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Google Fonts link-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="home-page">
+    <header>
+      <h1 id="main-title" class="title">sanevisuals</h1>
+      <!--Nav bar-->
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+          <a
+            class="navbar-brand"
+            href="index.html"
+            aria-label="sanevisuals home"
+          ></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="mainNav"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="images.html">Images</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="row justify-content-center">
+        <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <h2 id="about-me">About me</h2>
+          <p>
+            Hi, my name is Santeri and I'm a 27-year-old photographer from
+            Finland. My favorite type of photography is street photography,
+            especially cars, but I also like photographing buildings,
+            architecture and symmetrical things. I'm currently taking a break
+            from photography, but I plan to get back to it in the future.
+          </p>
+          <!-- Social media icons-->
+          <section class="row justify-content-center">
+            <div class="social-media-icons">
+              <div
+                class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"
+              >
+                <a
+                  href="https://www.instagram.com/sanevisuals/"
+                  class="fa fa-instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open sanevisuals on Instagram (opens in new tab)"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/santerisaloo/"
+                  class="fa fa-linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open sanevisuals on LinkedIn (opens in new tab)"
+                ></a>
+                <a
+                  href="https://www.facebook.com/sanevisuals/"
+                  class="fa fa-facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open sanevisuals on Facebook (opens in new tab)"
+                ></a>
+              </div>
+            </div>
+          </section>
+          <!-- Blockquote-->
+          <blockquote class="center-quote">
+            Imagination creates reality
+          </blockquote>
+        </div>
+
+        <!-- Image Carousel -->
+        <div
+          id="photoCarousel"
+          class="carousel slide mt-5"
+          data-bs-ride="carousel"
+        >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#photoCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-label="Go to slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#photoCarousel"
+              data-bs-slide-to="1"
+              aria-label="Go to slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#photoCarousel"
+              data-bs-slide-to="2"
+              aria-label="Go to slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#photoCarousel"
+              data-bs-slide-to="3"
+              aria-label="Go to slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#photoCarousel"
+              data-bs-slide-to="4"
+              aria-label="Go to slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#photoCarousel"
+              data-bs-slide-to="5"
+              aria-label="Go to slide 6"
+            ></button>
+          </div>
+
+          <!-- Carousel Images -->
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+              <img
+                src="Audi_1.jpg"
+                class="d-block w-100 img-fluid"
+                alt="Audi"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="f-type_frontleft.jpg"
+                class="d-block w-100 img-fluid"
+                alt="Jaguar_F-Type"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img src="tram.jpg" class="d-block w-100 img-fluid" alt="Tram" />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="office_building.jpg"
+                class="d-block w-100 img-fluid"
+                alt="office_building"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="staircase.jpg"
+                class="d-block w-100 img-fluid"
+                alt="staircase"
+              />
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="motorcycle.jpg"
+                class="d-block w-100 img-fluid"
+                alt="motorcycle"
+              />
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#photoCarousel"
+            data-bs-slide="prev"
+            aria-label="Previous slide"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#photoCarousel"
+            data-bs-slide="next"
+            aria-label="Next slide"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 sanevisuals. All rights reserved.</p>
+    </footer>
+
+    <!--Bootstrap Javascript CDN link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
